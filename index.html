@@ -1,60 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Academic website of Dipanjan Bera, PhD researcher in quantum communication, QKD, and quantum networks at IIT Delhi." />
-  <title>Dipanjan Bera | Quantum Communication Research</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dipanjan Bera — PhD Candidate at CARE, IIT Delhi. Research in quantum communication, QKD and quantum networks.">
+  <meta name="theme-color" content="#f4f8f3">
+  <title>Dipanjan Bera | Quantum Communication</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%A6%89%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('dipanjan-theme');
+        if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main navigation">
-      <a class="brand" href="#about">Dipanjan Bera<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a class="nav-link active" href="#about">About</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#research">Research</a>
-        <a class="nav-link" href="#others">Others</a>
+      <a class="brand" href="#about" aria-label="Dipanjan Bera home">🦉 <span>Dipanjan Bera</span></a>
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a class="nav-link active" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#research">Research</a>
+          <a class="nav-link" href="#others">Others</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Toggle light/dark mode">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span>
+        </button>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero section wrap" id="about">
+    <section class="section wrap hero" id="about">
       <div class="hero-profile">
-        <div class="portrait-placeholder" aria-label="Profile photo placeholder">
-          <span>DB</span>
-        </div>
+        <div class="portrait-placeholder" aria-label="Profile photo placeholder"><span>DB</span></div>
         <h1>Dipanjan Bera</h1>
-        <p class="role">PhD Research Scholar</p>
-        <p class="institution">Indian Institute of Technology Delhi</p>
-        <div class="profile-links">
-          <!-- Replace # with your actual profile URLs before publishing. -->
-          <a href="https://scholar.google.com/citations?hl=en&user=y6_th34AAAAJ" class="profile-link" data-placeholder="true">Google Scholar</a>
-          <a href="https://github.com/Dipanjan310" class="profile-link" data-placeholder="true">GitHub</a>
-          <a href="https://www.linkedin.com/in/dipanjan-bera-5b6b56203/" class="profile-link" data-placeholder="true">LinkedIn</a>
+        <p class="role">PhD Candidate, CARE</p>
+        <p class="institution">IIT Delhi · New Delhi, India</p>
+        <div class="profile-links" aria-label="Academic and social profiles">
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=y6_th34AAAAJ" class="profile-link" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+          <a href="https://github.com/Dipanjan310" class="profile-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/dipanjan-bera-5b6b56203/" class="profile-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         </div>
-        <p class="email-note">crz258444@iitd.ac.in</p>
+        <p class="email-note">crz258444 (at) care.iitd.ac.in</p>
       </div>
 
       <div class="hero-copy">
         <p class="eyebrow">ABOUT ME</p>
-        <h2>Researching secure quantum communication networks.</h2>
-        <p>
-          I am a PhD research scholar in Applied Electronics at IIT Delhi. My research interests
-          include quantum key distribution (QKD), quantum communication, quantum networks, and
-          quantum information processing.
-        </p>
-        <p>
-          My current work explores efficient key distribution and multiparty quantum conference
-          key agreement, with an emphasis on communication over optical-fiber channels and
-          practical network performance.
-        </p>
+        <h2>Quantum communication and secure quantum networks.</h2>
+        <p>I am a PhD candidate in CARE at the Indian Institute of Technology Delhi. My research interests include quantum communication, quantum key distribution (QKD), quantum networks, and quantum information processing.</p>
+        <p>My current work studies multiparty quantum conference key agreement over optical fiber and efficient key distribution in multi-hop QKD networks.</p>
+        <p class="advisor">Advisor: <a href="https://sites.google.com/view/qucip-iitd/home" target="_blank" rel="noopener noreferrer">Dr. Neel Kanth Kundu ↗</a></p>
+        <div class="hero-actions">
+          <a class="cv-button" href="Dipanjan_Bera_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+        </div>
 
         <div class="interest-tags">
           <span>Quantum Key Distribution</span>
@@ -66,25 +73,16 @@
         <div class="education-block">
           <h3>Education</h3>
           <article class="education-item">
-            <div class="item-heading">
-              <h4>Indian Institute of Technology Delhi</h4>
-              <span>July 2025 – Present</span>
-            </div>
+            <div class="item-heading"><h4>Indian Institute of Technology Delhi</h4><span>July 2025 – Present</span></div>
             <p>Ph.D. in Applied Electronics</p>
           </article>
           <article class="education-item">
-            <div class="item-heading">
-              <h4>Indian Institute of Technology Hyderabad</h4>
-              <span>2023 – 2025</span>
-            </div>
-            <p>M.Tech in Quantum and Solid-State Devices</p>
+            <div class="item-heading"><h4>Indian Institute of Technology Hyderabad</h4><span>Graduated July 2025</span></div>
+            <p>M.Tech. in Quantum and Solid-State Devices</p>
           </article>
           <article class="education-item">
-            <div class="item-heading">
-              <h4>College of Engineering and Management, Kolaghat</h4>
-              <span>2019 – 2023</span>
-            </div>
-            <p>B.Tech in Electronics and Communication Engineering</p>
+            <div class="item-heading"><h4>College of Engineering and Management, Kolaghat</h4><span>Graduated June 2023</span></div>
+            <p>B.Tech. in Electronics and Communication Engineering</p>
           </article>
         </div>
       </div>
@@ -96,18 +94,12 @@
         <h2>Professional experience</h2>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="item-heading">
-              <h3>Engineering Trainee · DiracQ Systems Pvt. Ltd.</h3>
-              <span>Apr 2025 – Aug 2025</span>
-            </div>
-            <p>Contributed to the development of a quantum key distribution system involving an optics setup and single-photon detectors.</p>
+            <div class="item-heading"><h3>Engineering Trainee · DiracQ Systems Pvt. Ltd.</h3><span>April 2025 – August 2025</span></div>
+            <p>Contributed to the development of a Quantum Key Distribution (QKD) system using an optical setup and single-photon detectors.</p>
           </article>
           <article class="timeline-item">
-            <div class="item-heading">
-              <h3>Web Development Intern · Ardent</h3>
-              <span>Summer 2022</span>
-            </div>
-            <p>Worked with the MERN stack and developed TextUtils, a React application for text manipulation and analysis.</p>
+            <div class="item-heading"><h3>Web Development Intern · Ardent Computech Pvt. Ltd.</h3><span>Summer 2022</span></div>
+            <p>Worked with MongoDB, Express.js, React, and Node.js for end-to-end web application development. Developed TextUtils, a React app for word counting, text transformations, and text analysis.</p>
           </article>
         </div>
       </div>
@@ -115,45 +107,42 @@
 
     <section class="section wrap" id="research">
       <p class="eyebrow">RESEARCH</p>
-      <h2>Research projects & publications</h2>
-      <p class="section-intro">Selected work in quantum communication, key agreement, and quantum-computing simulation.</p>
+      <h2>Research</h2>
+      <p class="section-intro">My work focuses on quantum-secure communication, multiparty key agreement, and routing in QKD networks.</p>
 
+      <h3 class="subsection-title">Publications</h3>
       <article class="research-card">
-        <div class="card-topline"><span class="status">Manuscript submitted</span><span>2026</span></div>
-        <h3>Performance Analysis of Multiparty GHZ-State Quantum Conference Key Agreement over Optical Fiber</h3>
+        <div class="card-topline"><span class="status">Submitted to IEEE TCOM</span><span>2026</span></div>
+        <h3>Performance Analysis of Multiparty GHZ-State Quantum Conference Key Agreement over Optical Fiber Channel</h3>
         <p class="authors">PhD research · First author</p>
-        <p>Models an N-party GHZ-based quantum conference key agreement system using the N-BB84 protocol over optical-fiber links. The work derives bit- and phase-error expressions and studies a composable finite-key secret-key-rate framework.</p>
-        <p class="caution">Add the final publication or preprint link after checking that it is public and current.</p>
+        <p>Analyzes an N-party GHZ-state quantum conference key agreement protocol using the N-BB84 scheme over optical-fiber channels. Models fiber attenuation, polarization-mode-dispersion-induced dephasing, and detector dark counts; derives bit- and phase-error rates and incorporates them into finite-key secret-key-rate analysis.</p>
+        <p class="publication-link"><a href="https://arxiv.org/abs/2610.05448" target="_blank" rel="noopener noreferrer">arXiv:2610.05448 ↗</a></p>
       </article>
-
       <article class="research-card">
-        <div class="card-topline"><span class="status">Accepted</span><span>2026</span></div>
+        <div class="card-topline"><span class="status">Accepted at IEEE ANTS 2026</span><span>2026</span></div>
         <h3>Redundant Routing Protocol for Key Rate Maximization in QKD Networks</h3>
-        <p class="authors">PhD research · Co-author · Accepted at IEEE ANTS</p>
-        <p>Studies redundant routing for maximizing key distribution rates across multi-hop QKD networks with trusted quantum repeaters, evaluated using the SimQN simulator.</p>
-        <p class="caution">Add the official conference or paper link when available.</p>
+        <p class="authors">PhD research · Co-author</p>
+        <p>Studies key-rate maximization for multiple source–destination pairs in multi-hop QKD networks with trusted quantum repeaters. Develops a redundant-routing framework using Key Distribution Link Establishment (KDLE), formulated as a linear program, and Key Distribution Path Selection (KDPS), evaluated through E91-based simulations.</p>
       </article>
 
+      <h3 class="subsection-title projects-heading">Research Projects</h3>
       <article class="research-card">
-        <div class="card-topline"><span class="status">Master's thesis</span><span>2024–2025</span></div>
+        <div class="card-topline"><span class="status">Master’s thesis</span><span>Sept. 2024 – June 2025</span></div>
         <h3>Classical Simulation of Quantum Algorithms using Binary Methods</h3>
-        <p class="authors">M.Tech thesis · IIT Hyderabad</p>
-        <p>Developed a Python-based framework for simulating quantum operations and circuits, including the Quantum Fourier Transform and Grover's algorithm, with performance comparisons against Qiskit and PennyLane.</p>
+        <p class="authors">IIT Hyderabad</p>
+        <p>Developed a Python-based framework for quantum operations and circuits, implemented the Quantum Fourier Transform (QFT) and Grover’s algorithm, and benchmarked time complexity against Qiskit and PennyLane.</p>
       </article>
-
       <article class="research-card">
-        <div class="card-topline"><span class="status">Research project</span><span>2024</span></div>
+        <div class="card-topline"><span class="status">Master’s research</span><span>Jan. 2024 – Apr. 2024</span></div>
         <h3>Simulation of Measurement-Induced Phase Transition of Qubits</h3>
-        <p>Investigated how measurement probabilities affect quantum entanglement using quantum circuits and entanglement entropy.</p>
+        <p>Investigated how measurement probabilities affect quantum entanglement using quantum circuits with single- and two-qubit gates, projective measurements, and entanglement entropy.</p>
       </article>
-
-      <details class="more-research">
-        <summary>Show additional project</summary>
-        <article class="research-card compact">
-          <h3>Digital Logic IC Tester</h3>
-          <p>Designed an Arduino-based tester to assess the functionality of digital logic ICs and provide immediate status feedback.</p>
-        </article>
-      </details>
+      <article class="research-card">
+        <div class="card-topline"><span class="status">Bachelor’s thesis</span><span>Aug. 2022 – May 2024</span></div>
+        <h3>Digital Logic IC Tester</h3>
+        <p class="authors">College of Engineering and Management, Kolaghat</p>
+        <p>Designed and developed an Arduino-based digital logic IC tester to assess logic integrated circuits, with configurable automated tests and immediate feedback on operating status.</p>
+      </article>
     </section>
 
     <section class="section section-tint" id="others">
@@ -163,32 +152,34 @@
         <div class="other-grid">
           <article class="info-card">
             <h3>Technical skills</h3>
-            <p><strong>Programming:</strong> Python</p>
+            <p><strong>Programming:</strong> Python, MATLAB</p>
+            <p><strong>Scientific computing / ML:</strong> NumPy, TensorFlow, PyTorch, Keras, Scikit-learn, Pandas, Seaborn, Matplotlib</p>
+            <p><strong>Quantum algorithms and protocols:</strong> QFT, Grover’s algorithm, BB84, E91, teleportation, superdense coding</p>
             <p><strong>Quantum frameworks:</strong> Qiskit, PennyLane</p>
-            <p><strong>Libraries:</strong> NumPy, TensorFlow, PyTorch, Keras, Scikit-learn, Pandas, Matplotlib</p>
-            <p><strong>Tools:</strong> LaTeX, VS Code, Origin</p>
+            <p><strong>Tools:</strong> OOMMF, Origin, LaTeX, VS Code</p>
           </article>
           <article class="info-card">
             <h3>Certifications</h3>
             <ul>
-              <li>Introduction to Quantum Information — Coursera</li>
-              <li>Quantum Communication — IBM</li>
-              <li>Quantum Computations and Its Application in Molecular Structure — IIT Kharagpur</li>
-              <li>Supervised Machine Learning: Regression and Classification — Coursera</li>
-              <li>Semiconductor Workforce Development Program — SPARC, IIT Hyderabad</li>
+              <li>Introduction to Quantum Information — Coursera (2024)</li>
+              <li>Quantum Communication — IBM (2025)</li>
+              <li>Quantum Computations and Its Application in Molecular Structure — IIT Kharagpur (2025)</li>
+              <li>Supervised Machine Learning: Regression and Classification — Coursera (2024)</li>
+              <li>Semiconductor Workforce Development Program — SPARC, IIT Hyderabad (2024)</li>
+              <li>A Conference to Shape the Future of Semiconductor Technology — CENSE, IISc (2024)</li>
             </ul>
           </article>
           <article class="info-card">
-            <h3>Leadership & interests</h3>
+            <h3>Leadership & activities</h3>
             <ul>
               <li>Inspection Head, Mess Monitoring Council, IIT Hyderabad (2024)</li>
-              <li>Annual Tech Fest Head Coordinator (2022)</li>
-              <li>Reading books and playing table tennis</li>
+              <li>Head Coordinator, Annual Tech Fest (2022)</li>
             </ul>
           </article>
           <article class="info-card">
-            <h3>Relevant coursework</h3>
-            <p>Quantum mechanics, quantum computing, quantum information and communication, quantum measurement and sensing, solid-state devices, and digital system design.</p>
+            <h3>Relevant coursework & interests</h3>
+            <p>Quantum mechanics, quantum computing, advanced quantum information and communication, quantum measurement and sensing, optimization, and deep learning.</p>
+            <p><strong>Interests:</strong> Running and badminton.</p>
           </article>
         </div>
       </div>
@@ -196,10 +187,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Dipanjan Bera</p>
-      <a href="#about">Back to top ↑</a>
-    </div>
+    <div class="wrap footer-inner"><p>🦉 © <span id="year"></span> Dipanjan Bera</p><a href="#about">Back to top ↑</a></div>
   </footer>
   <script src="script.js"></script>
 </body>
